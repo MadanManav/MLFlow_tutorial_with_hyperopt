@@ -1,4 +1,4 @@
-# tutorial for using MLFlow tool with sample dataset (iris) and hyperparameter optimization with hyperopt library
+# Tutorial for using MLFlow tool with sample dataset (iris) and hyperparameter optimization with hyperopt library
 
 MLflow tracking:
 Mlflow have "experiments" as outer group in which runs are saved. This is useful when we have to compare runs which are intened for the same task.
