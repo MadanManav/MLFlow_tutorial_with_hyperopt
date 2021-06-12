@@ -6,10 +6,10 @@ You can pass experiment name for each individual run. If no experiment is define
 In order to use mlflow registry this example uses runs backend (storage location) as an sqlite database whereas the artifacts are saved locally. 
 This means that the meta files for the runs are read from database (mlruns.db) and artifacts are read from ./mlruns folder
 
-Step1) To restart this example, delete the ./mlruns folder and the database mlruns.db
+- Step1) To restart this example, delete the ./mlruns folder and the database mlruns.db
 and then run python Iris_hyperopt.py (assuming that you are in a conda enviornment which was created by running 'conda env create -f conda.yaml')
 
-Step2) Run the mlflow server/ UI to see the runs: 
+- Step2) Run the mlflow server/ UI to see the runs: 
 'mlflow server --backend-store-uri sqlite:///mlruns.db --default-artifact-root ./mlruns'
 There will be two sections i.e. experiments and models. In the experiment section under your defined experiment you will find all the iterations of the hyperopt.
 
@@ -25,13 +25,13 @@ In the file you specify (1) the name of the project, (2) which Conda/Docker/Syst
 In the entry point there has to be a "main" keyword where the project starts from, you can specify multiple scirpts that can be executed sequentially to create a workflow (see https://github.com/mlflow/mlflow/blob/master/examples/multistep_workflow/MLproject).
 
 To use MLflow projet: 
-Step 1) Go to the directory where you have cloned this repo as you will find the conda.yaml and mlproject file.
-Step 2) Delete the ./mlruns folder and the database mlruns.db
-Step 3) Create a new conda enviornment (conda create -n new_env python=3.7)
-Step 4) Activate the enviornment (conda activate new_env)
-Step 5) install pip (conda install pip)
-Step 6) install mlflow (pip install mlflow==1.14.1)
-Step 7) Run from the directory where project is by using command (mflow run .) or if you have defined input paramters then Run (mlflow run . -P name_of_param_1=20 -P name_of_param_2=50)
+- Step 1) Go to the directory where you have cloned this repo as you will find the conda.yaml and mlproject file.
+- Step 2) Delete the ./mlruns folder and the database mlruns.db
+- Step 3) Create a new conda enviornment (conda create -n new_env python=3.7)
+- Step 4) Activate the enviornment (conda activate new_env)
+- Step 5) install pip (conda install pip)
+- Step 6) install mlflow (pip install mlflow==1.14.1)
+- Step 7) Run from the directory where project is by using command (mflow run .) or if you have defined input paramters then Run (mlflow run . -P name_of_param_1=20 -P name_of_param_2=50)
 
 MLflow Registry:
 Enables versioning of models, makes it possible to tag models such as "Staging" or in "Production". Model registry requires setting up a database.
