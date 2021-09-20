@@ -32,6 +32,7 @@ To use MLflow projet:
 - Step 5) install pip (conda install pip)
 - Step 6) install mlflow (pip install mlflow==1.14.1)
 - Step 7) Run from the directory where project is by using command (mflow run .) or if you have defined input paramters then Run (mlflow run . -P name_of_param_1=20 -P name_of_param_2=50)
+- Step 8) Run (mlflow server --backend-store-uri sqlite:///mlruns.db --default-artifact-root ./mlruns) for using the registry otherwise experiments can not be accessed as the there is no meta.yaml in artifact locations rather the individual yaml files are stored inside the database.
 
 ## MLflow Registry:
 Enables versioning of models, makes it possible to tag models such as "Staging" or in "Production". Model registry requires setting up a database.
